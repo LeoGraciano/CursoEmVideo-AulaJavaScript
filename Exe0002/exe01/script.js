@@ -20,7 +20,7 @@ function confirm() {
 
     // var skip = 1;
     var skip = document.getElementById('id_skip');
-    if (skip.value.length == 0 || skip.value == 0) {
+    if (skip.value.length == 0 || skip.value <= 0) {
         window.alert('Campo passo inválidos, será atribuído o valor "1"')
         skip.value = 1
         skip = Number(skip.value)
@@ -31,31 +31,16 @@ function confirm() {
     res.innerHTML = ''
     var span = document.createElement('span')
 
-    let lista = new Array
-
     if (start > end) {
         // skip = (-skip)
-        for (start;end <= start;start -= skip) {
-            console.log(start)
-            if (start == end) {
-                var data = start+' &#127937;'
-            } else {
-                var data = start+' &#128073;'
-            }
-            lista.push(data)
+        for (start; end <= start; start -= skip) {
+            span.innerHTML += start + ' &#128073;'
         }
     } else {
-        for (start;start <= end;start += skip) {
-            console.log(start)
-            if (start == end) {
-                var data = start+' &#127937;'
-            } else {
-                var data = start+' &#128073;'
-            }
-            
-            lista.push(data)
+        for (start; start <= end; start += skip) {
+            span.innerHTML += start + ' &#128073;'
         }
     }
-    span.innerHTML = `${lista}`.replaceAll(",",'')
+    span.innerHTML += ' &#127937;'
     res.appendChild(span)
 }
