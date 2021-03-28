@@ -1,6 +1,11 @@
 function confirm() {
-    var number = Number(document.getElementById('id_number').value);
+    var number = document.getElementById('id_number');
+    if (number.value == '') {
+        window.alert('Campo em branco sera considerador o valor 0')
+    }
+    number = Number(number.value)
     var resp = document.getElementById('id_resp')
+    resp.innerHTML = 'Tabuada: <br>'
     var table = document.createElement('table');
     table.style = 'text-align: left'
     var tbody = document.createElement('tbody')

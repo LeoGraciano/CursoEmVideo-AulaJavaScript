@@ -28,7 +28,7 @@ function confirm() {
         skip = Number(skip.value)
     }
     var res = document.getElementById('id_res')
-    res.innerHTML = ''
+    res.innerHTML = 'Contato: <br>'
     var span = document.createElement('span')
 
     if (start > end) {
