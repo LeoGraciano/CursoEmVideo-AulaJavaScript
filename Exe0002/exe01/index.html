@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="id_start">Início :</label>
+                <input type="number" name='start' id='id_start'>
+            </p>
+            <p>
+                <label for="id_end">Fim :</label>
+                <input type="number" name='end' id='id_end'>
+            </p>
+            <p>
+                <label for="id_skip">Passos : </label>
+                <input type="number" name='skip' id='id_skip'>
+            </p>
+            <p><input type="button" class="btn" name='confirm' onclick='confirm()' id='id_confirm' value=Contar></p>
+        </div>
+        <div id='id_res'>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Leonardo Graciano</p>
+    </footer>
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
