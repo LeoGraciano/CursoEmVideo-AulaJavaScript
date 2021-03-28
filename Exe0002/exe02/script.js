@@ -17,7 +17,7 @@ function confirm() {
         var td = document.createElement('td');
         th.innerHTML = `${number} x ${i} =`
         td.innerHTML = `${number*i}`
-        
+
         tr.appendChild(th);
         tr.appendChild(td);
         tbody.appendChild(tr)
